@@ -101,7 +101,6 @@ signInForm.addEventListener("submit", function (event) {
   }
 });
 
-
 // welcome note
 
 function showWelcomeNote() {
@@ -142,19 +141,18 @@ function cashDeposited() {
     return;
   }
 
-
   const storedBalance = parseFloat(localStorage.getItem(activeUserEmail)) || 0;
   const newBalance = storedBalance + value;
 
   localStorage.setItem(activeUserEmail, newBalance.toFixed(2));
-  
+
   const balanceDetail = document.getElementById("balanceDetail");
-  balanceDetail.innerText = newBalance.toFixed(2)
+  balanceDetail.innerText = newBalance.toFixed(2);
 
   cashIn.value = "";
 }
 
-// Function to update the UI and perform cash withdrawal
+//  withdraw
 
 function cashWithdraw() {
   const activeUserEmail = document.getElementById("activeUserEmail").innerText;
@@ -174,6 +172,76 @@ function cashWithdraw() {
 
   const balanceDetail = document.getElementById("balanceDetail");
   balanceDetail.innerText = updatedBalance.toFixed(2);
-  
+
   cashOut.value = "";
 }
+
+// chart data
+const chartData = {
+  labels: ["May", "June", "July"],
+  data: [0, 0, 11000],
+};
+console.log(chartData);
+
+const myChart = document.querySelector(".myChart");
+
+new Chart(myChart, {
+  type: "bar",
+  data: {
+    labels: chartData.labels,
+    datasets: [
+      {
+        label: "Cash Flow",
+        data: chartData.data,
+      },
+    ],
+  },
+  options: {
+    borderWidth: 10,
+    borderRadius: 2,
+    hoverBorderWidth: 0,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
+
+
+// logOut
+
+const logOut = document.getElementById("logOut");
+logOut.addEventListener("click", function () {
+  bankPortal.classList.add("hide");
+  mainBody.classList.remove("hide");
+});
+
+// toogling
+const accountDetails = document.getElementById("accountDetails");
+const faqPage = document.getElementById("faqPage");
+const FAQ = document.getElementById("faq");
+const dashboard = document.getElementById("dashboard");
+const newsPage = document.getElementById("newsPage");
+const newsletter = document.getElementById("newsletter")
+console.log(dashboard);
+// move dashbaord to faq
+FAQ.addEventListener("click", function(){
+  // accountDetails.innerHTML = faqPage.innerHTML
+  faqPage.classList.remove("hide");
+  accountDetails.classList.add("hide")
+  newsPage.classList.add("hide"); 
+})
+// move faq to dashboard
+dashboard.addEventListener("click", function(){
+  // faqPage.innerHTML = accountDetails.innerHTML;
+  newsPage.classList.add("hide"); 
+  faqPage.classList.add("hide");
+  accountDetails.classList.remove("hide")
+})
+// move dashboard to newsletter
+newsletter.addEventListener("click", function(){
+  newsPage.classList.remove("hide");
+  accountDetails.classList.add("hide")
+  faqPage.classList.add("hide");
+})
