@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hide {
+  display: none !important;
+}
+
+.main-color{
+  color: #f47521;
+}
+
+.bg-mainColor{
+  background-color: #f47521 !important;
+}
+.bg-main {
+  background: url(Assets/13900590_5385130.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center !important;
+}
+#inner-bg {
+  background: url(Assets/13900590_5385130.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 100px black;
+  height: 600px;
+  box-shadow: inset 0 0 100px rgb(0, 0, 0);
+}
+.signin-heading {
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+.signin-heading::before {
+  content: " ";
+  width: 75px;
+  height: 8px;
+  background: rgb(0, 0, 0);
+  bottom: -20px;
+  border-radius: 5px;
+  position: absolute;
+}
+
+form {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  backdrop-filter: blur(1000px);
+}
+
+.register:hover {
+  cursor: pointer;
+}
+
+#welcome-text{
+  background: url(Assets/10016499_27233.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 40vh !important;
+}
+.welcome-text {
+  -webkit-text-stroke: 5px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: rgb(255, 0, 0);
+  text-shadow: 0 0 10px #f47521;
+  -webkit-text-stroke-width: 2px;
+  -webkit-animation: tracking-in-contract-bck-top 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-contract-bck-top 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @-webkit-keyframes tracking-in-contract-bck-top {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(-300px);
+            transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-top {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(-300px);
+            transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+

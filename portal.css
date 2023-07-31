@@ -1,0 +1,20 @@
+.sidebar-links{
+    box-shadow: 0 0 15px grey
+    /* background: rgb(254, 138, 157); */ 
+  }
+
+  .chart-container{
+    width: 200px;
+    /* background: linear-gradient(to left, blue, green); */
+  }
+  .chart{
+    width: 800px;
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    color: #023047;
+    transition: all 400ms ease;
+  }
+  .chart:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+  }
