@@ -116,6 +116,24 @@ function showBankPortal() {
   updateUserUI();
 }
 
+// transaction video
+
+function userTransactionImage(videoSrc){
+  let video = document.getElementById("transactionVideo");
+  const videoSource = document.querySelector("#transactionVideo source");
+
+  video.src = videoSrc;
+  video.load()
+  video.classList.remove("hide")
+
+  setTimeout(() => {
+    video.classList.add("hide");
+    video.pause();
+    video.src = "";
+  }, 3000)
+}
+
+// update UI Balance and name and email
 function updateUserUI(user) {
   const activeUserName = document.getElementById("activeUserName");
   const activeUserEmail = document.getElementById("activeUserEmail");
@@ -145,11 +163,13 @@ function cashDeposited() {
   const newBalance = storedBalance + value;
 
   localStorage.setItem(activeUserEmail, newBalance.toFixed(2));
-
+ 
   const balanceDetail = document.getElementById("balanceDetail");
   balanceDetail.innerText = newBalance.toFixed(2);
 
   cashIn.value = "";
+  
+  userTransactionImage("Assets/Cash Deposited.mp4");
 }
 
 //  withdraw
@@ -174,6 +194,8 @@ function cashWithdraw() {
   balanceDetail.innerText = updatedBalance.toFixed(2);
 
   cashOut.value = "";
+
+  userTransactionImage("Assets/Cash Withdraw.mp4");
 }
 
 // chart data

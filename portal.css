@@ -33,3 +33,17 @@
     width: 800px;
     height: 100px;
   }
+
+  #transactionVideo{
+    position: absolute;
+    z-index: 1000;
+    box-shadow: 0 0 100000px rgb(0, 0, 0,);
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    max-height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
