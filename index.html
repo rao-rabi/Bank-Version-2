@@ -145,55 +145,66 @@
     <div class="container">
       <div class="row gap-5">
         <!-- sidebar -->
-        <div class="col-3 border-0 bg-white" style="box-shadow: 0 0 10px grey">
-          <img src="Assets/attachment_62465982-removebg-preview.png" width="100" height="50" style="object-fit: contain"
+        <div class="col-lg-3 col-11 d-lg-flex flex-lg-column m-auto border-0 bg-white navbar navbar-expand-lg "
+          style="box-shadow: 0 0 10px grey">
+          <img src="Assets/attachment_62465982-removebg-preview.png" width="100" height="50" style="object-fit: contain;"
             alt="" />
-          <div class="d-flex justify-content-start mt-4 ps-4">
-            <img src="Assets/user icon.png" width="50" height="50" style="object-fit: contain" alt="" />
-            <div class="ms-2">
-              <h4 id="activeUserName" class="fw-bold main-color mb-0">
-                UserName
-              </h4>
-              <p class="mt-0 small" id="activeUserEmail">UserEmail</p>
+
+          <button class="navbar-toggler border-0 me-4" style="outline: none;" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-lg-flex flex-lg-column" id="navbarSupportedContent">
+            <div class="navebar-nav d-flex justify-content-start mt-4 ps-4">
+              <img src="Assets/user icon.png" width="50" height="50" style="object-fit: contain" alt="" />
+              <div class="ms-2">
+                <h4 id="activeUserName" class="fw-bold main-color mb-0">
+                  UserName
+                </h4>
+                <p class="mt-0 small" id="activeUserEmail">UserEmail</p>
+              </div>
             </div>
-          </div>
-          <div class="mt-5 ps-3 pe-3">
-            <div class="d-flex justify-content-start align-items-center ps-4 sidebar-links mb-3">
-              <i class="bi bi-wallet2 bg-mainColor text-white p-1 ps-2 pe-2 rounded-3"></i>
-              <p class="ms-1 fw-bold mt-3" id="dashboard">DashBoard</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-center ps-4 sidebar-links mb-3">
-              <i class="bi bi-newspaper bg-secondary-subtle p-1 ps-2 pe-2 rounded-3"></i>
-              <p class="ms-1 fw-bold mt-3" id="newsletter">NewsLetter</p>
-            </div>
-            <!-- <div class="d-flex justify-content-start align-items-center ps-4 sidebar-links mb-3">
+            <div class="mt-5 ps-3 pe-3">
+              <div class="d-flex justify-content-start align-items-center ps-4 pe-4 sidebar-links mb-3">
+                <i class="bi bi-wallet2 bg-mainColor text-white p-1 ps-2 pe-2 rounded-3"></i>
+                <p class="ms-1 fw-bold mt-3" id="dashboard">DashBoard</p>
+              </div>
+              <div class="d-flex justify-content-start align-items-center ps-4 pe-4 sidebar-links mb-3">
+                <i class="bi bi-newspaper bg-secondary-subtle p-1 ps-2 pe-2 rounded-3"></i>
+                <p class="ms-1 fw-bold mt-3" id="newsletter">NewsLetter</p>
+              </div>
+              <!-- <div class="d-flex justify-content-start align-items-center ps-4 sidebar-links mb-3">
               <i class="bi bi-clipboard-data bg-secondary-subtle p-1 ps-2 pe-2 rounded-3"></i>
               <p class="ms-1 fw-bold mt-3">Forms</p>
             </div> -->
-            <div class="d-flex justify-content-start align-items-center ps-4 sidebar-links mb-3">
-              <i class="bi bi-question-circle bg-secondary-subtle p-1 ps-2 pe-2 rounded-3"></i>
-              <p class="ms-1 fw-bold mt-3" id="faq">FAQ</p>
+              <div class="d-flex justify-content-start align-items-center ps-4 pe-4 sidebar-links mb-3">
+                <i class="bi bi-question-circle bg-secondary-subtle p-1 ps-2 pe-2 rounded-3"></i>
+                <p class="ms-1 fw-bold mt-3" id="faq">FAQ</p>
+              </div>
             </div>
-          </div>
-          <div class="mt-5 sidebar-links p-3 ps-4 mb-5 ms-3 me-3" id="logOut">
-            <i class="bi bi-power border border-1 border-black p-1 rounded-circle"></i><span class="fw-bold">
-              LogOut</span>
+            <div class="mt-5 sidebar-links p-3 ps-4 pe-4 mb-5 ms-3 me-3" id="logOut">
+              <i class="bi bi-power border border-1 border-black p-1 rounded-circle"></i><span class="fw-bold">
+                LogOut</span>
+            </div>
           </div>
         </div>
         <!-- main-content -->
 
-        <div class="main-container col-8">
+        <div class="main-container col-lg-8 col-12">
 
           <!-- dashboard -->
           <div class="col-12 p-4 bg-white border-0 h-100" style="box-shadow: 0 0 10px grey" id="accountDetails">
             <h1 class="main-color text-center mb-4 text-uppercase">
               Account Details
             </h1>
-            <div class="row justify-content-around align-items-center p-2 ms-5 me-5" style="box-shadow: 0 0 5px grey">
-              <div class="col-6">
-                <img src="Assets/19114110_6080570.jpg" width="300" class="object-fit-contain rounded-3" alt="" />
+            <!-- card and balance -->
+            <div class="row justify-content-around align-items-center p-2 ms-md-5 me-md-5"
+              style="box-shadow: 0 0 5px grey">
+              <div class="col-md-6 col-12">
+                <img src="Assets/19114110_6080570.jpg" class="object-fit-contain rounded-3 w-100" alt="" />
               </div>
-              <div class="col-6 h-50 p-3 mt-2 mb-2"
+              <div class="col-md-6 col-12 h-50 p-3 mt-2 mb-2"
                 style="background: transparent; backdrop-filter: blur(4px); box-shadow: 0 0 5px grey;">
                 <h4 class="text-decoration-underline text-uppercase">
                   Account Balance
@@ -202,8 +213,8 @@
               </div>
             </div>
             <!-- deposit and withdraw -->
-            <div class="row ms-5 me-5 justify-content-between mt-3">
-              <div class="d-flex flex-column mt-5 p-4 col-5" style="box-shadow: 0 0 10px grey">
+            <div class="row ms-md-5 me-md-5 justify-content-between mt-3">
+              <div class="d-flex flex-column mt-5 p-4 col-md-5 col-12" style="box-shadow: 0 0 10px grey">
                 <!-- model 1 -->
                 <div class="w-100">
                   <button type="button" class="btn btn-danger bg-mainColor pt-3 pb-3 ps-4 pe-4 border-0 me-2 w-100"
@@ -304,21 +315,10 @@
                 </div>
               </div>
               <!-- chart -->
-              <div class="chart mt-5 p-5 col-5">
-                <div class="chart-container">
+              <div class="chart mt-5 pt-5 col-md-6 col-12">
+                <div class="chart-container m-auto">
                   <canvas class="myChart"></canvas>
                 </div>
-                <!-- <div class="chart-details">
-                  <ul class="fw-bold d-flex justify-content-between">
-                    <li class="me-5">
-                      Cash-In: <span class="cash-amount" id="cashInDetails">0</span>
-                    </li>
-                    <li class="me-5">
-                      Cash-out: <span class="cash-amount" id="cashOutDetails">0</span>
-                    </li>
-                    <li>Balance: <span class="cash-amount" id="cashBalance">0</span></li>
-                  </ul>
-                </div> -->
               </div>
 
             </div>
@@ -337,15 +337,15 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
-                    <pre>
-         <b> Online banking safety tips</b>
-          Password protect your phone, tablet, computer. ...
-          Create strong, unique passwords and change them every 3 months. ...
-          Use multi factor authentication. ...
-          Don't keep your accounts logged in. ...
-          Avoid banking on public WIFI. ...
-          Don't access your bank account from a shared computer.
-        </pre>
+                    <p>
+                      <b> Online banking safety tips</b><br>
+                      Password protect your phone, tablet, computer.<br>
+                      Create strong, unique passwords and change them every 3 months.<br>
+                      Use multi factor authentication.<br>
+                      Don't keep your accounts logged in.<br>
+                      Avoid banking on public WIFI.<br>
+                      Don't access your bank account from a shared computer.<br>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -358,17 +358,17 @@
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
-                    <pre>
-         <b> Risks of Online Banking</b>
-          Scary customer service. ...
-          Online banks can go offline. ...
-          Hackers. ...
-          Identity Theft. ...
-          Choose an online bank with top-of-the-line security. ...
-          Don't do your banking on public Wi-Fi. ...
-          Be careful with your debit card. ...
-          Change passwords regularly.
-        </pre>
+                    <p>
+                      <b> Risks of Online Banking</b><br>
+                      Scary customer service.<br>
+                      Online banks can go offline.<br>
+                      Hackers.<br>
+                      Identity Theft.<br>
+                      Choose an online bank with top-of-the-line security.<br>
+                      Don't do your banking on public Wi-Fi.<br>
+                      Be careful with your debit card.<br>
+                      Change passwords regularly.<br>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -412,24 +412,18 @@
             </div>
           </div>
 
-
-
         </div>
-
-        <!-- transaction image -->
-
-        <video id="transactionVideo" alt="" class="hide" autoplay>
-          <source src="" type="video/mp4">
-        </video>
-
-
-
-
-
-
       </div>
     </div>
   </div>
+
+
+  <!-- transaction image -->
+
+  <video id="transactionVideo" alt="" class="hide" autoplay>
+    <source src="" type="video/mp4">
+  </video>
+
 
 
 

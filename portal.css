@@ -23,14 +23,14 @@
     background: url(Assets/13900590_5385130.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     display: flex;
     align-items: center !important;
+    min-height: 100vh;
   }
 
   .img-news{
     object-fit: contain;
-    width: 800px;
+    width: 200px;
     height: 100px;
   }
 
