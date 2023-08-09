@@ -105,9 +105,18 @@ signInForm.addEventListener("submit", function (event) {
 });
 
 // show Hide Password
-passwordSignInIcon.addEventListener("click", showHide(signInPassword, passwordSignInIcon));
-signUpPasswordIcon.addEventListener("click", showHide(signUpPassword, signUpPasswordIcon));
-passwordIconRetype.addEventListener("click", showHide(signUpRetypePassword,passwordIconRetype));
+passwordSignInIcon.addEventListener(
+  "click",
+  showHide(signInPassword, passwordSignInIcon)
+);
+signUpPasswordIcon.addEventListener(
+  "click",
+  showHide(signUpPassword, signUpPasswordIcon)
+);
+passwordIconRetype.addEventListener(
+  "click",
+  showHide(signUpRetypePassword, passwordIconRetype)
+);
 
 function showHide(passwordInput, icon) {
   return function () {
