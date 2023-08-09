@@ -8,6 +8,9 @@ const signUpEmail = document.getElementById("inputSignUpEmail");
 const signUpPhone = document.getElementById("inputSignUpPhone");
 const signUpPassword = document.getElementById("inputSignUpPassword");
 const signUpRetypePassword = document.getElementById("inputRetypePassword");
+const passwordSignInIcon = document.getElementById("passwordIcon");
+const passwordIconRetype = document.getElementById("passwordIconRetype");
+const signUpPasswordIcon = document.getElementById("signUpPasswordIcon");
 
 const cashIn = document.getElementById("inputCashIn");
 const cashOut = document.getElementById("inputCashOut");
@@ -101,6 +104,23 @@ signInForm.addEventListener("submit", function (event) {
   }
 });
 
+// show Hide Password
+passwordSignInIcon.addEventListener("click", showHide(signInPassword, passwordSignInIcon));
+signUpPasswordIcon.addEventListener("click", showHide(signUpPassword, signUpPasswordIcon));
+passwordIconRetype.addEventListener("click", showHide(signUpRetypePassword,passwordIconRetype));
+
+function showHide(passwordInput, icon) {
+  return function () {
+    if (passwordInput.type == "password") {
+      passwordInput.type = "text";
+      icon.classList.replace("bi-eye-slash", "bi-eye");
+    } else {
+      passwordInput.type = "password";
+      icon.classList.replace("bi-eye", "bi-eye-slash");
+    }
+  };
+}
+
 // welcome note
 
 function showWelcomeNote() {
@@ -118,19 +138,19 @@ function showBankPortal() {
 
 // transaction video
 
-function userTransactionImage(videoSrc){
+function userTransactionImage(videoSrc) {
   let video = document.getElementById("transactionVideo");
   const videoSource = document.querySelector("#transactionVideo source");
 
   video.src = videoSrc;
-  video.load()
-  video.classList.remove("hide")
+  video.load();
+  video.classList.remove("hide");
 
   setTimeout(() => {
     video.classList.add("hide");
     video.pause();
     video.src = "";
-  }, 3000)
+  }, 3000);
 }
 
 // update UI Balance and name and email
@@ -163,12 +183,12 @@ function cashDeposited() {
   const newBalance = storedBalance + value;
 
   localStorage.setItem(activeUserEmail, newBalance.toFixed(2));
- 
+
   const balanceDetail = document.getElementById("balanceDetail");
   balanceDetail.innerText = newBalance.toFixed(2);
 
   cashIn.value = "";
-  
+
   userTransactionImage("Assets/Cash Deposited.mp4");
 }
 
@@ -230,7 +250,6 @@ new Chart(myChart, {
   },
 });
 
-
 // logOut
 
 const logOut = document.getElementById("logOut");
@@ -245,25 +264,25 @@ const faqPage = document.getElementById("faqPage");
 const FAQ = document.getElementById("faq");
 const dashboard = document.getElementById("dashboard");
 const newsPage = document.getElementById("newsPage");
-const newsletter = document.getElementById("newsletter")
+const newsletter = document.getElementById("newsletter");
 console.log(dashboard);
 // move dashbaord to faq
-FAQ.addEventListener("click", function(){
+FAQ.addEventListener("click", function () {
   // accountDetails.innerHTML = faqPage.innerHTML
   faqPage.classList.remove("hide");
-  accountDetails.classList.add("hide")
-  newsPage.classList.add("hide"); 
-})
+  accountDetails.classList.add("hide");
+  newsPage.classList.add("hide");
+});
 // move faq to dashboard
-dashboard.addEventListener("click", function(){
+dashboard.addEventListener("click", function () {
   // faqPage.innerHTML = accountDetails.innerHTML;
-  newsPage.classList.add("hide"); 
+  newsPage.classList.add("hide");
   faqPage.classList.add("hide");
-  accountDetails.classList.remove("hide")
-})
+  accountDetails.classList.remove("hide");
+});
 // move dashboard to newsletter
-newsletter.addEventListener("click", function(){
+newsletter.addEventListener("click", function () {
   newsPage.classList.remove("hide");
-  accountDetails.classList.add("hide")
+  accountDetails.classList.add("hide");
   faqPage.classList.add("hide");
-})
+});
